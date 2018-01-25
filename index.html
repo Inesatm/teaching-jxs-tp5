@@ -10,13 +10,24 @@
 <body ng-app="pokedex">
 
 	<div class="container">
-		<h1>Pokésir</h1>
+		<h1>First step</h1>
 
 		<!-- Search -->
-		<div></div>
+		<div ng-controller="searchPk">
+            <h1>Pokésir</h1>
+            <label>Pokemon's ID :</label>
+            <input ng-model="pokemon.id" name="idpk">
+            <h1>{{pokemon.id}}</h1>
+            <label>Pokemon's Name :</label>
+            <input ng-model="pokemon.name" name="namepk">
+            <h1>{{pokemon.name}}</h1>
+       
+          </input>
+    
+        </div>
 
 		<!-- Pokémon information -->
-		<div></div>
+		<div ></div>
 
 	</div>
 
