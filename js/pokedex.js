@@ -12,8 +12,11 @@ function($scope) {
             {name : 'Mew' , id : 8},
             {name : 'Ronflex' , id : 9}
     ];
-  
-  }]);;
+    $scope.ichooseu = function(pkmn){
+        console.log(" I CHOOSE YOU :"+pkmn);
+    }
+  }
+]);;
 // With this you can inject POKEAPI url wherever you want
 pokeApp.constant('POKEAPI', 'http://pokeapi.co');
 

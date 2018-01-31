@@ -16,16 +16,23 @@
 		<div ng-controller="searchPk">
            
             <label>Pokemon's ID :</label>
-             
-            <form class="form-inline">
-                <input ng-model="searchId" type="text"
+                <!-- search.$ to match both name and id of pokemons-->
+                <input ng-model="searchId.$" type="text"
                   placeholder="ID of pokemon" >
-              </form>
+                  
+             <!--display my pk's list / search with the id  -->
               <ul ng-repeat="pokemon in pokemons | filter:searchId | orderBy: 'id' ">
              
                 <li>{{pokemon.name}}</li>
               </ul>
-          
+              <label> Choose one</label>
+              <select ng-model="pkmn">
+                <option ng-repeat="pokemon in pokemons | filter:{id: id} | orderBy:id">{{pokemon.name}}</option>
+            
+             </select>
+             <button ng-click="ichooseu(pkmn)" >Je te choisis ! </button>
+            
+             
         </div>
 
 		<!-- Pokémon information -->
