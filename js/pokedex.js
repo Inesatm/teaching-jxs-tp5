@@ -1,5 +1,5 @@
 var pokeApp = angular.module('pokedex', ['ngResource']);
-pokeApp.controller('searchPk', ['$scope', 
+pokeApp.controller('searchPk', ['$scope', '$http',
 function($scope) {
     $scope.pokemons =[
             {name : 'Pikachu' , id : 1},
@@ -14,9 +14,17 @@ function($scope) {
     ];
     $scope.ichooseu = function(pkmn){
         console.log(" I CHOOSE YOU :"+pkmn);
-    }
-  }
-]);;
+    }  }
+]);
+pokeApp.controller('pkmnfromapi', function($scope, $http){ 
+    $http.get("https://pokeapi.co/api/v2/pokemon/")
+    .then(function(response) {
+
+        $scope.content = response.data.results;
+        console.log($scope.content);
+})});
+
+
 // With this you can inject POKEAPI url wherever you want
 pokeApp.constant('POKEAPI', 'http://pokeapi.co');
 

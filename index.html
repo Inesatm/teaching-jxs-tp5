@@ -36,7 +36,14 @@
         </div>
 
 		<!-- Pokémon information -->
-		<div ></div>
+		<div ng-controller="pkmnfromapi">
+            <h1>From api : </h1>
+            <ul>
+                <li ng-repeat="pokemon in content">
+                 {{$index}} {{ pokemon.url.id}}
+                </li>
+              </ul>
+        </div>
 
 	</div>
 
