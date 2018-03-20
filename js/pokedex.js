@@ -1,5 +1,3 @@
-
-
 var pokeApp = angular.module('pokedex', ['ngResource']);
 // With this you can inject POKEAPI url wherever you want
 pokeApp.constant('POKEAPI', 'https://pokeapi.co/api/v2/');
@@ -11,7 +9,6 @@ pokeApp.controller('searchPokemon', function ($scope, $resource, PokedexService,
     var ApiData = $resource(POKEAPI + "pokemon/?limit=60");
     ApiData.get().$promise.then(function (results) {
         $scope.pokemons = results.results;
-        console.log($scope.pokemons);
     });
     $scope.ichooseu = function (pkmn) {
         console.log("whoopsi " + pkmn);
@@ -34,12 +31,10 @@ pokeApp.factory('PokedexService', function ($resource, $log, $rootScope) {
                     const entry = description[i];
                     if (entry.language.name === 'en') {
                         desc = entry.flavor_text;
-                        // console.log("sss"+desc);
                         break;
-                                        }
+                    }
                 }
                 pokemon.description = desc;
-                console.log("description" + pokemon.description);
             });
         });
     }
@@ -52,12 +47,12 @@ pokeApp.controller('pokeWtach', function ($scope, PokedexService) {
     $scope.$watch(function () {
         return PokedexService.getPoke()
     },
-     function (newVal) {
+        function (newVal) {
             $scope.pokemon = newVal;
         });
 });
 
-pokeApp.directive('pokedex',function(){
+pokeApp.directive('pokedex', function () {
     return {
         templateUrl: 'pokedex.html'
     };
