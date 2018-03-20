@@ -4,53 +4,18 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title></title>
-
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-
 </head>
-<body ng-app="pokedex">
-  <div class="container">
-    <h1>Pokésir First step</h1>
-    <!-- Search -->
-    <div ng-controller="searchPokemon">
-      <label>Pokemon's ID :</label>
-      <input ng-model="name" type="text" placeholder="eg: Charmeleon ">
-      <form class="navbar-form navbar-left" role="search">
-        <label> Choose one</label>
-        <select ng-change="ichooseu(pkmn)" ng-model="pkmn">
-          <option value="{{pokemon.url}}" ng-repeat="pokemon in pokemons | filter:{name: name} | orderBy:pokemon">{{pokemon.name}}</option>
-        </select>
-      </form>
-    </div>
-
-    <div ng-controller="pokeWtach">
-      <div>
-        <h2>{{pokemon.name }}
-        </h2>
-        <h3>Description</h3>
-        <p>{{pokemon.description}}</p>
-        <h3>Moves</h3>
-        <table>
-          <tr>
-            <th>Name</th>
-          </tr>
-          <tr ng-repeat="move in pokemon.moves">
-            <td>{{move.move.name}}</td>
-          </tr>
-        </table>
-      </div>
-
-    </div>
-    <!-- Dependencies -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-resource.min.js"></script>
-
-    <!-- Pokedex app -->
-    <script src="js/pokedex.js"></script>
-
-
+<div ng-app="pokedex">
+  <pokedex></pokedex>
+</div>
+<!-- Dependencies -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<!-- Pokedex app -->
+<script src="js/pokedex.js"></script>
 </body>
 
 </html>

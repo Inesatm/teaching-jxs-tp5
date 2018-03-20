@@ -56,3 +56,9 @@ pokeApp.controller('pokeWtach', function ($scope, PokedexService) {
             $scope.pokemon = newVal;
         });
 });
+
+pokeApp.directive('pokedex',function(){
+    return {
+        templateUrl: 'pokedex.html'
+    };
+});
