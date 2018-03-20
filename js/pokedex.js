@@ -57,3 +57,14 @@ pokeApp.directive('pokedex', function () {
         templateUrl: 'pokedex.html'
     };
 });
+
+pokeApp.directive("pokemon", function () {
+	return {
+		templateUrl:'pokemon.html'
+	}
+}).directive('move', function () {
+	return {
+		templateUrl:'move.html',
+		replace:true
+	};
+});

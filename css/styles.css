@@ -1,0 +1,8 @@
+.pokedex {
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	margin: 0 auto;
+    text-align: center;
+	background: url('../img/pokedex.gif');
+}
