@@ -5,12 +5,12 @@
                 <a class="navbar-brand" href="#">Pika pika</a>
                 <form class="form-inline col-sm-offset-3" style="margin-top: 10px;" role="search">
                     <div class="form-group">
-                        <input class="form-control" ng-model="name" type="text" placeholder="eg: Charmeleon ">
-                        <select class="form-control"  ng-change="ichooseu(pkmn)" ng-model="pkmn">
+                        <input class="form-control" ng-model="name" type="text" placeholder="eg: Charmeleon "></input>
+                        <select class="form-control" ng-change="ichooseu(pkmn)" ng-model="pkmn">
                             <option value="{{pokemon.url}}" ng-repeat="pokemon in pokemons | filter:{name: name} | orderBy:pokemon">{{pokemon.name}}</option>
                         </select>
+                    </div>
                 </form>
-                </div>
             </div>
         </div>
     </nav>
@@ -31,30 +31,28 @@
                 </div>
                 <div class="col-md-2 col-md-offset-1" style="padding-top: 13px;">
                     <div class="">
-                    <table class="table table-hover">
-                        <tr>
-                            <td>N°</td>
-                            <td>{{pokemon.id}}</td>
-                        </tr>
-                        <tr>
-                            <td>Type(s)</td>
-                            <td>
-                                <span ng-repeat="type in pokemon.types">{{type.type.name}} </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Height</td>
-                            <td>{{pokemon.height/10}}m</td>
-                        </tr>
-                        <tr>
-                            <td>Weight</td>
-                            <td>{{pokemon.weight}}kg</td>
-                        </tr>
-                    </table>
+                        <table class="table table-hover">
+                            <tr>
+                                <td>N°</td>
+                                <td>{{pokemon.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Type(s)</td>
+                                <td>
+                                    <span ng-repeat="type in pokemon.types">{{type.type.name}} </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Height</td>
+                                <td>{{pokemon.height/10}}m</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>{{pokemon.weight}}kg</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-
-                </div>
-
             </div>
         </div>
     </div>

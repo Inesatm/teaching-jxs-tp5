@@ -6,7 +6,7 @@ pokeApp.config(['$resourceProvider', function ($resourceProvider) {
     $resourceProvider.defaults.stripTrailingSlashes = false;
 }]);
 pokeApp.controller('searchPokemon', function ($scope, $resource, PokedexService, POKEAPI) {
-    var ApiData = $resource(POKEAPI + "pokemon/?limit=60");
+    var ApiData = $resource(POKEAPI + "pokemon/?limit=140");
     ApiData.get().$promise.then(function (results) {
         $scope.pokemons = results.results;
     });
@@ -31,7 +31,7 @@ pokeApp.factory('PokedexService', function ($resource, $log, $rootScope) {
                     if (entry.language.name === 'en') {
                         desc = entry.flavor_text;
                         break;
-                                        }
+                    }
                 }
                 pokemon.description = desc;
             });

@@ -31,3 +31,6 @@
     ul li a:hover {
         color: white;
     }
+table.table-hover{
+font-size: 12px;
+}
