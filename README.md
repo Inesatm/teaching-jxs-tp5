@@ -2,7 +2,7 @@
 
 AngularJS
 
-Binôme : Dimas ESPINASSE (Bourg Palette) - Inès ATMANI (Azuria)
+Binôme : Dimas ESPINASSE (Bourg Palette) - Ines ATMANI (Azuria)
 
 ## Lancement de l'application
-Le professeur Chen vous invite à lancer ~~la pobéball~~ l'application via le fichier .html Une fois lancé, votre aventure pourra commencer !
+Le professeur Chen vous invite à lancer ~~la pobéball~~ l'application via le fichier index.html Une fois lancée, votre aventure pourra commencer !
