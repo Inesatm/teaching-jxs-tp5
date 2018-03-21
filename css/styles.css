@@ -4,5 +4,30 @@
 	overflow: hidden;
 	margin: 0 auto;
     text-align: center;
-	background: url('../img/pokedex.gif');
-}
+	background: url('../img/pokedex.gif');}
+
+	ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li {
+        float: left;
+        /*pour IE*/
+    }
+
+    ul li a {
+        display: block;
+        float: left;
+        width: 100px;
+        line-height: 50px;
+        /*hauteur de l'image de fond*/
+        color: #DCDCDC;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    ul li a:hover {
+        color: white;
+    }

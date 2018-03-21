@@ -11,7 +11,6 @@ pokeApp.controller('searchPokemon', function ($scope, $resource, PokedexService,
         $scope.pokemons = results.results;
     });
     $scope.ichooseu = function (pkmn) {
-        console.log("whoopsi " + pkmn);
         PokedexService.getPokemon(pkmn);
     }
 });
@@ -32,7 +31,7 @@ pokeApp.factory('PokedexService', function ($resource, $log, $rootScope) {
                     if (entry.language.name === 'en') {
                         desc = entry.flavor_text;
                         break;
-                    }
+                                        }
                 }
                 pokemon.description = desc;
             });
@@ -51,20 +50,8 @@ pokeApp.controller('pokeWtach', function ($scope, PokedexService) {
             $scope.pokemon = newVal;
         });
 });
-
 pokeApp.directive('pokedex', function () {
     return {
         templateUrl: 'pokedex.html'
     };
-});
-
-pokeApp.directive("pokemon", function () {
-	return {
-		templateUrl:'pokemon.html'
-	}
-}).directive('move', function () {
-	return {
-		templateUrl:'move.html',
-		replace:true
-	};
 });
