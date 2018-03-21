@@ -1,14 +1,12 @@
-<style>
-</style>
 <div class="pokedex">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 39px !important;">
         <div class="container">
             <div class="navbar-header" ng-controller="searchPokemon">
                 <a class="navbar-brand" href="#">Pika pika</a>
-                <form class="form-inline col-lg-6" role="search">
+                <form class="form-inline col-sm-offset-3" style="margin-top: 10px;" role="search">
                     <div class="form-group">
                         <input class="form-control" ng-model="name" type="text" placeholder="eg: Charmeleon ">
-                        <select class="form-control" style="width: 100% !important;" ng-change="ichooseu(pkmn)" ng-model="pkmn">
+                        <select class="form-control"  ng-change="ichooseu(pkmn)" ng-model="pkmn">
                             <option value="{{pokemon.url}}" ng-repeat="pokemon in pokemons | filter:{name: name} | orderBy:pokemon">{{pokemon.name}}</option>
                         </select>
                 </form>
@@ -31,7 +29,7 @@
                         </ul>
                     </table>
                 </div>
-                <div class="col-md-2 col-md-offset-1">
+                <div class="col-md-2 col-md-offset-1" style="padding-top: 13px;">
                     <div class="">
                     <table class="table table-hover">
                         <tr>
